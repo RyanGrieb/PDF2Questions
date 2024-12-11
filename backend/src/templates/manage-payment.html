@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block head %}
+<script>
+    async function remove_payment() {
+        console.log("Removing payment...");
+
+        // TODO: Prompt the user they will be charged X upon cancelation.
+
+        // Send a POST request to the server and wait for the response
+        const response = await fetch("/remove-payment", {
+            method: "POST",
+        });
+        console.log(response);
+
+        if (response.ok) {
+            const response_data = await response.json();
+            console.log(response_data);
+            window.location.href = response_data.return_url
+        }
+    }
+</script>
+{% endblock %} {% block body %}
+<div class="">
+    <div class="">
+        <p>Your card: <br>{{ customer_card.brand }} **** **** **** **** {{ customer_card.last4 }} <br>{{
+            customer_card.exp_month }} / {{ customer_card.exp_year }}</p>
+
+    </div>
+    <a href="/add-payment">
+        <button class="button-1" style="width: 225px;">Change Payment</button>
+    </a>
+    <button class="button-1" style="width: 225px;" onclick="remove_payment()">Remove Payment</button>
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block head %}
+<script src="{{ url_for('static',filename='js/results.js') }}?u={{ last_updated }}"></script>
+<script>
+    const single_item_cost = parseFloat("{{ single_item_cost }}")
+    let user_type = "paid"
+    /*if (!card_connected && logged_in) {
+        user_type = "free"
+    } else if (!logged_in) {
+        user_type = "guest"
+    }*/
+</script>
+{% endblock %}
+{% block body %}
+<div class="results-body">
+    <div class="results-files" id="scrollbar2">
+        <div class="results-files-header">
+            <h1>Documents</h1>
+        </div>
+        <!--
+        <div class="results-flashcards">
+            <hr>
+            <h3><b>Flashcards</b></h3>
+            <ul>
+            </ul>
+        </div>
+        <div class="results-keywords">
+            <hr>
+            <h3><b>Keyword/Definition</b></h3>
+            <ul>
+            </ul>
+        </div>
+        -->
+        <div class="results-test">
+            <hr>
+            <h3><b>Test/Quiz</b></h3>
+            <ul>
+            </ul>
+        </div>
+    </div>
+    <div class="results-right">
+        <div class="results-options" style="display: none;">
+            <h3 class="document-title center-text" style="font-size: 180%;"></h3>
+            <div style="display:flex; justify-content: center;">
+                <button class="button-1" onclick="remove_document()">Remove</button>
+                <button class="button-1" onclick="on_export_click()">Export</button>
+            </div>
+        </div>
+        <p class="results-select-prompt" style="text-align: center;">Select a document from the list on the left to
+            view
+            a file.<br><br>Please note: Generation can take up to several minutes.</p>
+        <div class="results-output" id="scrollbar2"></div>
+    </div>
+</div>
+
+{% endblock %}

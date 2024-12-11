@@ -1,0 +1,4 @@
+Send this data as 3 API calls (we need to do this for accuracy), with each new call using the new parsed chunks from the previous one:
+1. Read the two chunks, and remove duplicate data/sentences from both chunks if present.\nChunk1: {}\nChunk2: {}
+2. Check if information is cut off between the two chunks (e.g. a sentence is split), if true, format the chunks so they both start and end properly.
+3. From the provided text, generate flashcard questions and answers. Respond in the following format for each Q&A set:\nQ: ... A: ...\nHere is the provided text:\n

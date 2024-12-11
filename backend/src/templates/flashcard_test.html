@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block head %}
+{% endblock %} {% block body %}
+<i class="loader"></i>
+<div class="flashcard">
+    <div class="flashcard-child flashcard-top">
+        <div class="flashcard-flip"><img src="{{ url_for('static', filename='img/rotate-icon.png') }}" /></div>
+    </div>
+    <div class="flashcard-child flashcard-middle">
+        <div class="flashcard-arrow-btn"><i class="arrow left"></i></div>
+        <div class="flashcard-text">
+            <p>What is 1 + 1? What is afdsafd asdf asdf sadf sadf asdf ?sdasdfasdf asdf asfd sadf sadfa sfda
+                asdfsadfsadfsadf asdf sadfasdf asdf asdfasdf safdsafdsadfasdfasdfasdfasdfasd fsadf ?
+                aaaaaaaaaaaaaaaaaaaaaa? fdsadf as dfa sfd sadf asd f asfd sad fas dfa sdfasdfasdfas dfa sfa sfd
+            </p>
+        </div>
+        <div class="flashcard-arrow-btn"><i class="arrow right"></i></div>
+    </div>
+    <div class="flashcard-child flashcard-bottom">
+        <div class="flashcard-count">
+            <p>1/23</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

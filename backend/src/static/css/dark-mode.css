@@ -1,0 +1,27 @@
+:root {
+  --surface-1: #171717;
+  --surface-2: #0d0d0d;
+  --surface-3: #3f3f3f;
+  --surface-4: #282828;
+  --surface-5: #222121;
+  --surface-6: #555555;
+
+  --flashcard-background: var(--surface-2);
+  --flashcard-color: var(--surface-5);
+  --font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", sans-serif;
+  --text-color-1: white;
+  --input-accent-color: var(--surface-1);
+  --flashcard-btn-background-color: var(--surface-3);
+  --flashcard-flip: url("{{ url_for('static', filename='img/rotate-icon-white.png') }}");
+
+  --scroll-background: var(--surface-1);
+  --scroll-scrubber: var(--surface-6);
+}
+
+.flashcard-flip {
+  /* Other styles for .flashcard-flip */
+  width: 42px; /* Adjust width and height as needed */
+  height: 42px;
+  background-image: url("../img/rotate-icon-white.png");
+  background-size: cover;
+}

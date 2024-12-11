@@ -1,0 +1,26 @@
+:root {
+  --surface-1: #f5ebfa;
+  --surface-2: #ffffff;
+  --surface-3: #ffffff;
+  --surface-4: rgb(44, 34, 44);
+  --surface-5: #222222;
+  --surface-6: #3f3f3f;
+
+  --flashcard-background: var(--surface-3);
+  --flashcard-color: var(--surface-5);
+  --font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", sans-serif;
+  --text-color-1: var(--surface-4);
+  --input-accent-color: var(--surface-4);
+  --flashcard-btn-background-color: var(--surface-4);
+
+  --scroll-background: var(--surface-1);
+  --scroll-scrubber: var(--surface-6);
+}
+
+.flashcard-flip {
+  /* Other styles for .flashcard-flip */
+  width: 100px; /* Adjust width and height as needed */
+  height: 100px;
+  background-image: url("../img/rotate-icon-white.png");
+  background-size: cover; /* Adjust as needed */
+}

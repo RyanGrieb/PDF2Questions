@@ -1,0 +1,64 @@
+* ASAP BEFORE ADVERTISTING*
+- Add scrollbar to upload area.
+- Implement dark/light mode detection & dynamicaly load css based on user's desktop theme.
+- Update production DB to mirror our development one.
+- Create admin account to test on production
+- Sign in w/ google.
+- Sign in w/ apple.
+- Test payments on production
+- Google adsense
+- setup support email (pdf2flashcards@gmail.com would work for now. doc2ai@gmail.com ? ? ? ?)
+- Google ad compaign: Hire some dude off fiverr and make the following images
+    image: Minimum size: 600 x 314 pixels. Recommended size: 1200 x 628 pixels. Max size: 4096 x 4096 pixels.
+    logo: Minimum size: 128 x 128 pixels. Recommended size: 1200 x 1200 pixels. Max size: 4096 x 4096 pixels.
+- Implement request refund feature (Some users may not be satisfied with generated output, give them that option.)
+
+*** Improve output via. re-processing ***
+    Have GPT re-process these
+- Handle edgecases where question or answer output is about XXX characters
+    * ??? - Need to reproduce *
+    0. Edgecase: Remove '-' at beginning of keyword for keyword/definition generation
+
+
+** See competitor:
+https://ankigpt.help/deck/8499b561-0f84-4366-9f5e-482817e29445
+
+* DECEMBER * (Improve output, Export features, User Accounts)
+1. Export test/quiz to google forms. Export UI, question selection/editor.
+2. Give title to PDF export tab. - Rewrite export feature, better flashcards to PDF, support keyword/definition to PDF, support test/quiz to PDF.
+3. Implement export to cheatsheet feature (For keyword: definition feature)
+4. Improve Q&A flashcard output, e.g. duplicate questions, ect.
+7. Saved documents for user accounts, regardless of cookies.
+
+* JANUARY * (Premium accounts, Look & Feel, SEO)
+10. Add "premium features" (Export options, filetypes, filesize, unlimited conversions)
+12. Fix SEO for google.
+13. Fix CSS to support mobile devices.
+14. Write up report on potential costs of API vs. hardware.
+
+* FEBRUARY * (Company, Marketing)
+14. Create LLC
+15. Legal shit? User data, uploaded docs, ect.?
+16. Start marketing
+
+* MARCH * (Email, Income Tracking)
+17. Create work email? @pdf2flashcards.com
+18. Shift payments to @pdf2flashcards.com
+19. Automate income/expenses from email onto google sheets: https://docs.google.com/spreadsheets/d/1vxsje0roJ4g_YpmBPFZC467zoVXOtJUPI0PY7keWLB0/edit#gid=0
+
+
+
+* Not as important things to do *
+- When users hover over buttons, display a tooltip telling users what they do.
+- Make flashcard size bigger
+- If we remove a file (front-end), make sure we don't have any running get_task_status w/ the associated file & it's conversion_type.
+- Test viewing paid files from user 1 as user 2. User 2 should NOT be able to see all results. (**** I think this is fixed.)
+- Limit guest/free accounts to 1 / 5 documents a day.
+- Write chmod script to renew https certs. & restart the proxy-https container.
+- Handle stripe user deleted while card is connected.
+- Confirm email prompt
+- Save uploaded files w/ user account in DB.
+- Before processing document with ai, determine the document style on the first page and apply unique prompts per each style.
+    * For example, we might have a document with a lot of Foo: Bar, Word: Definition text. We change the prompt to improve output.
+    * Another example is if there are existing test questions/answers and we are generating a test/quiz from pdf. Change the prompt...
+    * 

@@ -1,0 +1,32 @@
+**Multiple Choice Questions** 
+-- Question: Which of the following is not an asset of a computer system? A) Hardware B) Software C) Data D) Communication facilities and networks -- Answer: D) Communication facilities and networks
+
+-- Question: What are the categories of vulnerabilities? A) Corrupted B) Leaky C) Unavailable D) All of the above -- Answer: D) All of the above
+
+-- Question: What is the goal of countermeasures in dealing with security attacks? A) Introduce new vulnerabilities B) Minimize residual level of risk to the assets C) Increase system vulnerabilities D) None of the above -- Answer: B) Minimize residual level of risk to the assets
+
+**True/False Questions**
+-- Question: Passive attacks attempt to alter system resources or affect their operation. -- Answer: False
+-- Question: Misuse causes a system component to perform a function disabling a system component. -- Answer: True
+-- Question: Incapacitation prevents or interrupts system operation by hindering system operation. -- Answer: True
+
+
+2023-12-21 19:02:30 TEST QUESTION: **Multiple Choice Questions** 
+2023-12-21 19:02:30 [2023-12-22 01:02:30,220] ERROR in app: Exception on request POST /convertfile
+2023-12-21 19:02:30 Traceback (most recent call last):
+2023-12-21 19:02:30   File "/code/src/async_actions/pdf_processing.py", line 532, in async_json2test
+2023-12-21 19:02:30     test_questions = await gpt_generate_test_questions(server, md5_name, text_chunk, conversion_options)
+2023-12-21 19:02:30   File "/code/src/async_actions/pdf_processing.py", line 267, in gpt_generate_test_questions
+2023-12-21 19:02:30     question = split_question[1].strip()
+2023-12-21 19:02:30 IndexError: list index out of range
+2023-12-21 19:02:30 
+2023-12-21 19:02:30 During handling of the above exception, another exception occurred:
+2023-12-21 19:02:30 
+2023-12-21 19:02:30 Traceback (most recent call last):
+2023-12-21 19:02:30   File "/usr/local/lib/python3.10/site-packages/quart/app.py", line 1553, in _wrapper
+2023-12-21 19:02:30     await copy_current_app_context(self.ensure_async(func))(*args, **kwargs)
+2023-12-21 19:02:30   File "/usr/local/lib/python3.10/site-packages/quart/ctx.py", line 343, in wrapper
+2023-12-21 19:02:30     return await app_context.app.ensure_async(func)(*args, **kwargs)
+2023-12-21 19:02:30   File "/code/src/async_actions/pdf_processing.py", line 552, in async_json2test
+2023-12-21 19:02:30     error_message = f"Error: {str(e)} at line {traceback.tb_lineno}"
+2023-12-21 19:02:30 AttributeError: module 'traceback' has no attribute 'tb_lineno'

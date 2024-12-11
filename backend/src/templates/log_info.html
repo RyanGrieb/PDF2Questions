@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block head %}
+{% endblock %} {% block body %}
+<script>
+    console.log(` {{ log_data}} `)
+</script>
+<div id="pdf-logs-div">
+    <p style="white-space: pre-line;">
+        {{ log_data }}
+    </p>
+</div>
+{% endblock %}

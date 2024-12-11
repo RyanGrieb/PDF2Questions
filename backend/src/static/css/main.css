@@ -1,0 +1,829 @@
+a {
+  color: var(--surface-5);
+}
+
+input[type="radio"] {
+  accent-color: var(--input-accent-color);
+}
+
+input[type="checkbox"] {
+  accent-color: var(--input-accent-color);
+}
+
+#checkout {
+  /* Set background color to dark */
+  background-color: var(--surface-1) !important;
+}
+
+.gradient-1 {
+  background-color: var(--surface-1);
+}
+
+.gradient-2 {
+  background-color: var(--surface-2);
+}
+
+.gradient-3 {
+  background-color: var(--surface-3);
+}
+
+.gradient-4 {
+  background-color: var(--surface-4);
+}
+
+.gradient-5 {
+  background-color: var(--surface-5);
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /*background-color:white;*/
+  /*background: radial-gradient(circle at center in hsl shorter hue, var(--surface-1), var(--surface-2));*/
+  background: var(--surface-1);
+  font-family: var(--font-family);
+  color: var(--text-color-1);
+  margin-top: 0;
+  padding: 10px;
+  padding-top: 0;
+}
+
+label {
+  font-size: 19px;
+}
+
+li p {
+  display: inline;
+}
+
+li a {
+  text-decoration: none;
+  font-family: var(--font-family);
+  font-size: 20px;
+  color: var(--surface-5);
+}
+
+li a:hover {
+  opacity: 1;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between; /* To evenly distribute the items horizontally */
+  /*background-color: rgba(3, 10, 223, 0.116);*/
+  background-color: var(--surface-3);
+  padding: 10px;
+  margin-top: 0;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border: 1px solid var(--surface-4);
+  border-top: none;
+
+  flex: 0 0 auto; /* div A should remain its original height (neither expand nor shrink) */
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Make the <ul> a flex container */
+}
+
+nav li {
+  margin-right: 30px;
+  font-family: var(--font-family);
+  font-weight: bold;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--font-color-1);
+  font-size: 25px;
+  padding: 4px;
+}
+
+/* Add hover effect for links */
+nav a:hover {
+  background-color: var(--surface-1);
+  border-radius: 8px;
+}
+
+h1 {
+  font-size: 250%;
+}
+
+h2 {
+  font-size: 150%;
+}
+
+p {
+  font-family: var(--font-family);
+  font-size: 130%;
+}
+
+.hidden {
+  display: none !important;
+}
+
+#toc-container {
+  margin: auto;
+  margin-top: 30px;
+  background: var(--surface-3) none repeat scroll 0 0;
+  border: 1px solid #aaa;
+  display: table;
+  font-size: 95%;
+  margin-bottom: 1em;
+  padding: 20px;
+  width: auto;
+}
+
+#toc-container li,
+#toc-container ul,
+#toc-container ul li {
+  list-style: outside none none !important;
+  padding: 0;
+}
+
+.toc-list {
+  text-align: center;
+}
+
+.toc-title {
+  font-weight: 700;
+  text-align: center;
+  font-size: 40px;
+}
+
+#help-faq {
+  font-family: var(--font-family);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#help-discord {
+  font-family: var(--font-family);
+  text-align: center;
+}
+
+.center-text {
+  text-align: center;
+  font-family: var(--font-family);
+}
+
+.center-horizontally {
+  margin: auto;
+  width: 50%;
+}
+
+.center-inside-elems {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.qa-set {
+  border: 3px solid #8377b9;
+  padding: 10px;
+  margin-bottom: 6px;
+}
+
+.upload-content {
+  display: flex;
+  justify-content: center;
+  overflow-y: auto;
+}
+
+.upload-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.upload-area {
+  padding: 4px;
+  background-color: var(--surface-3);
+  width: 50%;
+  min-height: 250px;
+  height: 50%;
+  border: 8px dashed var(--surface-4); /* Optional: Add a dashed border for visual style */
+  border-radius: 8px;
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.upload-area a {
+  color: var(--surface-5);
+}
+
+#converting-files-list {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+#converting-files-list li {
+  padding: 6px;
+}
+
+#converting-files-list li b {
+  padding-left: 6px;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+input[type="submit"] {
+  display: none;
+}
+
+.button-1-disabled {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #a9aeaf 0, #646666 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
+    rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #c7c4c4;
+  display: inline-flex;
+  /*font-family: "JetBrains Mono",monospace;*/
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 24px;
+  width: 150px;
+  font-family: var(--font-family);
+}
+
+.button-1 * {
+  padding: 5px;
+}
+
+.button-1 {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, var(--surface-4) 0, var(--surface-4) 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
+    rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-family: var(--font-family);
+  font-size: 27px;
+  width: 195px;
+}
+
+.button-1:focus {
+  box-shadow: var(--surface-5) 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, var(--surface-5) 0 -3px 0 inset;
+}
+
+.button-1:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, var(--surface-6) 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-1:active {
+  box-shadow: var(--surface-6) 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.loader {
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+  border: 5px solid var(--surface-4);
+  border-bottom-color: #3c4fe0;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.sentence-box p {
+  max-width: 350;
+  word-break: break-all;
+  overflow-wrap: break-word;
+}
+
+/* CSS Typing */
+.css-typing p {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+}
+
+.css-typing p:nth-child(1) {
+  width: 7.3em;
+  animation: typing 2s steps(40, end);
+  animation-fill-mode: forwards;
+}
+
+.css-typing p:nth-child(2) {
+  width: 11.5em;
+  opacity: 0;
+  animation: typing2 2s steps(40, end);
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+}
+
+.error {
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+}
+
+.error:before,
+.error:after {
+  position: absolute;
+  left: 15px;
+  content: " ";
+  height: 33px;
+  width: 6px;
+  background-color: red;
+}
+.error:before {
+  transform: rotate(45deg);
+}
+.error:after {
+  transform: rotate(-45deg);
+}
+
+.checkmark-done {
+  transform: rotate(45deg);
+  height: 24px;
+  width: 12px;
+  border-bottom: 7px solid #78b13f;
+  border-right: 7px solid #78b13f;
+}
+
+.flashcard {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--flashcard-background);
+  width: 500px;
+  height: 300px;
+  margin: 4px;
+  border: 1px solid black;
+  align-self: center;
+}
+
+.flashcard-child {
+  flex: 1;
+  display: flex;
+}
+
+.flashcard-arrow-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4px;
+  width: 42px;
+  height: 42px;
+  background-color: var(--flashcard-btn-background-color);
+  flex-shrink: 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.flashcard-top {
+  position: relative;
+}
+
+.flashcard-flip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  border-radius: 10px;
+
+  margin: 4px;
+  width: 42px;
+  height: 42px;
+
+  background-color: var(--flashcard-btn-background-color);
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  cursor: pointer;
+}
+
+.flashcard-flip img {
+  flex-shrink: 0;
+  width: 42px;
+  height: 52px;
+}
+
+.flashcard-middle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.flashcard-bottom {
+  position: relative;
+}
+
+.flashcard-count {
+  position: absolute;
+  bottom: 0;
+  left: 50%; /* Moves the left edge of the footer to the center */
+  transform: translateX(-50%); /* Centers the footer element */
+}
+
+.flashcard-bottom p {
+  margin: 0;
+}
+
+.arrow {
+  border: solid white;
+  border-width: 0 6px 6px 0;
+  display: inline-block;
+  padding: 6px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.results-body {
+  margin-top: 10px;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+}
+
+.results-files {
+  background-color: var(--surface-2);
+  border: 1px solid var(--surface-4);
+  flex-grow: 0; /* do not grow   - initial value: 0 */
+  flex-shrink: 0; /* do not shrink - initial value: 1 */
+  flex-basis: 20em; /* width/height  - initial value: auto */
+  padding: 4px;
+  border-radius: 8px;
+  max-width: 30%;
+  overflow-y: auto;
+}
+
+.results-files h3 {
+  font-size: 200%;
+}
+
+.results-files hr {
+  border-color: var(--text-color-1);
+}
+
+.results-files ul {
+  list-style: none;
+  padding: 4px;
+}
+
+.results-files li:hover {
+  background-color: var(--surface-1);
+}
+
+.results-files .loader {
+  margin-left: auto;
+  order: 2;
+}
+
+.results-files .checkmark-done {
+  margin-left: auto;
+  order: 2;
+  margin-right: 10px;
+}
+
+.results-files .error {
+  position: sticky;
+  margin-left: auto;
+  order: 2;
+  margin-right: 5px;
+}
+
+.results-files li p {
+  padding: 0;
+  margin-top: 14px;
+  margin-bottom: 14px;
+  display: inline-block;
+  width: 280px;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+}
+
+.results-files li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding-left: 4px;
+  padding-right: 4px;
+  background-color: var(--surface-3);
+  border-radius: 6px;
+  margin-top: 5px;
+  border: 1px solid var(--surface-4);
+}
+
+.results-right {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 8px;
+}
+
+.results-output {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-right: 8px;
+  padding-top: 8px;
+}
+
+.results-output h2 {
+  font-size: 180%;
+  text-align: center;
+}
+
+.results-output .output-text {
+  margin: 0;
+  margin-top: 5px;
+  background-color: var(--surface-3);
+  padding: 4px;
+  border: 1px solid var(--surface-4);
+  border-radius: 8px;
+}
+
+.results-files-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.upload-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.convert-region ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.convert-region li {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.convert-region li div {
+  display: flex;
+  width: 100%;
+  min-height: 46px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.convert-region li div * {
+  margin: 4px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.convert-region li button {
+  cursor: pointer;
+  width: 42px;
+  height: 32px;
+  border-radius: 8px;
+  background-color: var(--surface-4);
+  border: none;
+  color: white;
+}
+
+.convert-region li p {
+  white-space: normal;
+  width: 70%;
+}
+
+.convert-region svg {
+  width: 100px;
+  height: 8px;
+}
+
+.convert-section {
+  width: 50%;
+  margin-top: 10px;
+  padding: 4px;
+  border: 1px solid var(--surface-4);
+  background-color: var(--surface-3);
+  border-radius: 8px;
+}
+
+.convert-options {
+  padding: 6px;
+}
+
+.convert-options p {
+  margin: 4px;
+}
+
+.prompt-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+}
+
+.prompt-box {
+  background-color: var(--surface-3);
+  width: 300px;
+  height: 180px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--surface-4);
+}
+
+.prompt-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.prompt-buttons * {
+  margin: 10px;
+}
+
+.prompt-container a {
+  color: var(--surface-5);
+}
+
+.results-options {
+  border: 1px solid var(--surface-4);
+  background-color: var(--surface-2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 8px;
+  /*flex: 0 0 auto;*/
+}
+
+.export-data-list {
+  background-color: var(--surface-3);
+}
+
+.results-options button {
+  margin: 8px;
+  padding: 10px;
+}
+
+.export-buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.export-button {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.error-text {
+  color: rgb(196, 6, 6);
+}
+
+.show-more-region {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--surface-3);
+  padding: 15px;
+  border: 1px solid var(--surface-4);
+  border-radius: 8px;
+}
+
+#scrollbar2::-webkit-scrollbar {
+  width: 20px;
+}
+
+#scrollbar2::-webkit-scrollbar-track {
+  border-radius: 8px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: var(--scroll-background);
+}
+
+#scrollbar2::-webkit-scrollbar-thumb {
+  border: 3px solid transparent;
+  border-radius: 9px;
+  background-clip: content-box;
+  background-color: var(--scroll-scrubber);
+}
+
+.body-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing2 {
+  0% {
+    opacity: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+    opacity: 1;
+  }
+}

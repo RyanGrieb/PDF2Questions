@@ -1,0 +1,10 @@
+To enter DB:
+docker exec -it <id> bash
+mysql -u root -p
+use user;
+
+
+
+Scroll flare css:
+
+https://jsfiddle.net/8ndoyfsc/

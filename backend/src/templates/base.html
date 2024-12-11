@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+    <script src="https://cdn.rawgit.com/kimmobrunfeldt/progressbar.js/0.5.6/dist/progressbar.js"></script>
+    <script src="{{ url_for('static',filename='js/base.js') }}?u={{ last_updated }}"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8533389826717477"
+        crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Exam Generator">
+    <title>Exam Generator</title>
+    <script>
+        const card_connected = ("{{ session.card_connected }}".toLowerCase() === "true" || "{{ session.card_connected }}".toLowerCase() === "1")
+        const logged_in = ("{{ session.logged_in }}".toLowerCase() === "true")
+        // Handle light/dark mode themes:
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            const dark_css = document.createElement('link');
+            dark_css.rel = 'stylesheet';
+            dark_css.href = "{{ url_for('static',filename='css/dark-mode.css') }}?u={{ last_updated }}";
+            document.head.appendChild(dark_css);
+        } else {
+            const light_css = document.createElement('link');
+            light_css.rel = 'stylesheet';
+            light_css.href = "{{ url_for('static',filename='css/light-mode.css') }}?u={{ last_updated }}";
+            document.head.appendChild(light_css);
+        }
+    </script>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}?u={{ last_updated }}" />
+    {% block head %}{% endblock %}
+</head>
+
+<body>
+    <div class="body-content">
+        <nav id="base-navbar" class="scroll-flare-a">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/results">Converted Documents</a></li>
+                <li><a href="/help">Help</a></li>
+            </ul>
+        </nav>
+        {% block body %}{% endblock %}
+    </div>
+
+</body>
+
+</html>

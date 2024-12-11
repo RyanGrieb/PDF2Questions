@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static',filename='css/profile.css') }}?u={{ last_updated }}" />
+{% endblock %} {% block body %}
+<div class="profile-block">
+    <div class="profile-container">
+        <p>Your Account: {{session.email}}</p>
+        {% if session.card_connected %}
+        <p>Account Type: Paid</p>
+        <p>Monthly Usage: {{amount // 2}} results / ${{amount / 100}}</p>
+        <p>Billing Due: {{charge_date}}</p>
+        <div class="profile-buttons">
+            <a href="/manage-payment">
+                <button class="button-1" style="width: 275px;">Manage payments</button>
+            </a>
+            {% else %}
+            <p>Account Type: Free</p>
+            <a href="/add-payment">
+                <button type="payment" class="button-1" style="width: 275px;">Add Payment</button>
+            </a>
+            {% endif %}
+            <form action="/logout" method="post">
+                <button type="submit" class="button-1" style="width: 275px;">Logout</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

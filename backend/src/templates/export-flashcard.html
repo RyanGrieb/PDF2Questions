@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static',filename='css/export-flashcard.css') }}?u={{ last_updated }}" />
+<script>
+    const md5_name = "{{ md5_name }}"
+    const filename = "{{ filename }}"
+</script>
+<script src="{{ url_for('static',filename='js/export-flashcard.js') }}?u={{ last_updated }}"></script>
+{% endblock %}
+{% block body %}
+<div class="export-layout">
+    <h2>Export {{ filename }}</h2>
+    <div class="export-options">
+        <p>Export options:</p>
+        <button class="button-1" onclick="export_as_pdf()" style="width: 225px;">Export as PDF</button>
+    </div>
+    <p>{{ error_msg }}</p>
+    <div class="export-data-list">
+        <div class="export-list-top">
+            <input type="checkbox" checked="true" id="top-checkbox" onchange="toggle_all_checkboxes()">
+        </div>
+    </div>
+</div>
+{% endblock %}

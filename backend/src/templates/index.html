@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% block head %}
+<script src="{{ url_for('static',filename='js/index.js') }}?u={{ last_updated }}"></script>
+<!-- <script src="{{ url_for('static',filename='js/index_fluff.js') }}?u={{ last_updated }}"></script> -->
+<meta name="google-site-verification" content="3Q-06zBt5OdyGsO-K5KTUa3gsM3Xz56QLXTSQGDZpoY" />
+{% endblock %} {% block body %}
+<div>
+    <div class="center-horizontally center-inside-elems">
+        <h1 class="center-text" style="margin-bottom: 0; font-size: 60px;">Exam Generator</h1>
+        <h2 class="center-text">Create exams & quizzes from documents</h2>
+    </div>
+</div>
+<div class="upload-content">
+    <div class="upload-area" id="scrollbar2" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
+        <div class="upload-header">
+            <form method="post" enctype="multipart/form-data">
+                <label class="button-1 center-horizontally" for="file-upload"
+                    style="display: flex; flex-direction: column; height: 75px; width: 225px;">
+                    <div>
+                        <i class="fa fa-cloud-upload"></i> Upload Files
+                    </div>
+                    <label style="font-size: 15px; padding: 0; margin: 0;">(pdf & power-point only)</label>
+                </label>
+                <input id="file-upload" type="file" name="file"
+                    accept="application/pdf, application/vnd.openxmlformats-officedocument.presentationml.presentation"
+                    onchange="upload_files()" multiple></input>
+
+            </form>
+        </div>
+        <div class="convert-region center-inside-elems">
+            <ul>
+            </ul>
+        </div>
+    </div>
+
+    <div class="center-text">
+        <p class="error-text"></p>
+    </div>
+    <div class="convert-section center-horizontally center-inside-elems">
+        <div class="convert-options">
+            <p>Conversion Options:</p>
+            <input type="radio" id="radio-test" name="convert_type" value="test" checked="true">
+            <label for="radio-test">Test/Quiz Questions</label><br>
+            <div class="convert-test-options">
+                &emsp;<input type="checkbox" id="check-multiple-choice" name="test_type" checked="checked"
+                    value="test_multiple_choice">
+                <label for="check-multiple-choice">Multiple Choice</label><br>
+                &emsp;<input type="checkbox" id="check-true-false" name="test_type" checked="checked"
+                    value="test_true_false">
+                <label for="check-true-false">True/False</label><br>
+                &emsp;<input type="checkbox" id="check-free-response" name="test_type" checked="checked" ,
+                    value="test_free_response">
+                <label for="check-free-response">Free Response</label><br>
+            </div>
+        </div>
+        <button class="file-convert-btn button-1 hidden" onclick="convert_files()">Convert
+            Files</button>
+    </div>
+</div>
+<!-- Temporary DB values test: 
+<ul style="display: none;">
+    {% for item in rec %}
+    <li>DB Test: {{ item }}</li>
+    {% endfor %}
+</ul>
+-->
+{% endblock %}

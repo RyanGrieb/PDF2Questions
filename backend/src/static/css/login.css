@@ -1,0 +1,63 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; /* Hide scrollbars */
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Full height */
+}
+
+.login-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border: 6px ridge var(--surface-4);
+  border-radius: 8px;
+  background-color: var(--surface-2);
+  width: 400px;
+  height: 350px;
+}
+
+.login-box div {
+  display: flex;
+  justify-content: center;
+}
+
+.login-box button {
+  margin-top: 20px;
+}
+
+.login-box p {
+  padding: 0;
+  margin: 0;
+  margin-top: 6px;
+}
+
+.login-box input {
+  color: var(--text-color-1);
+  background-color: var(--surface-1);
+  width: 250px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+/* Change the white to any color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+input:-webkit-autofill::first-line {
+  -webkit-box-shadow: 0 0 0 30px var(--surface-1) inset !important;
+}
+
+/*Change text in autofill textbox*/
+input:-webkit-autofill {
+  -webkit-text-fill-color: var(--text-color-1) !important;
+}

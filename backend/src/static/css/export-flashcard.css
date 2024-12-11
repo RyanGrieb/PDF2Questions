@@ -1,0 +1,20 @@
+.export-data-list ul {
+  list-style: none;
+  padding-left: 4px;
+}
+
+.export-data-list li {
+  display: flex;
+  padding: 10px;
+}
+
+.data-text {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+}
+
+.export-list-top {
+  padding-left: 12px;
+  padding-top: 20px;
+}
